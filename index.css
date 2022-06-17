@@ -21,7 +21,10 @@ body {
 }
 
 .topnav #myLinks {
-  display: none;
+  display: flex;
+  margin-top: -3rem;
+  float: right;
+  
 }
 
 .topnav a {
@@ -34,18 +37,34 @@ body {
 
 .topnav a.icon {
   background: black;
-  display: block;
+  display: none;
   position: absolute;
   right: 0;
   top: 0;
 }
 
 .topnav a:hover {
-  background-color: rgb(154, 70, 211);
+  background-color: rgb(70, 173, 211);
   color: black;
 }
 
 .active {
   background-color: green;
   color: white;
+}
+@media (max-width:700px){
+    .topnav #myLinks {
+        display: block;
+        margin-top: 1rem;
+        margin-right: 5%;
+        text-align: center;
+      }
+      .topnav a.icon {
+        background: black;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      } 
+      
 }
